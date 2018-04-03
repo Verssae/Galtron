@@ -279,8 +279,6 @@ def updateBullets(setting, screen, stats, sb, ship, aliens, bullets, eBullets):
 	if setting.interception:
 		pg.sprite.groupcollide(bullets, eBullets, bullets, eBullets)
 
->>>>>>> master
-
 
 def checkBulletAlienCol(setting, screen, stats, sb, ship, aliens, bullets, eBullets):
 	"""Detect collisions between alien and bullets"""

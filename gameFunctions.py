@@ -168,7 +168,7 @@ def checkPlayBtn(setting, screen, stats, sb, playBtn, sel, ship, aliens, bullets
 		sb.prepLevel()
 		sb.prepHighScore()
                 #Reset BackGround
-		setting.bgimg(0)
+		# setting.bgimg(0)
 	elif not stats.gameActive and stats.paused:
 		#IF the game is not running and game is paused unpause the game
 		stats.gameActive = True
@@ -311,12 +311,12 @@ def checkBulletAlienCol(setting, screen, stats, sb, ship, aliens, bullets, eBull
 	#Check if there are no more aliens
 	if len(aliens) == 0:
 		#Destroy exsiting bullets and create new fleet
-		bullets.empty()
-		eBullets.empty()
+		# bullets.empty()
+		# eBullets.empty()
 		setting.increaseSpeed() #Speed up game
 		stats.level += 1
 		sb.prepLevel()
-		time.sleep(1)
+		# time.sleep(1)
 		createFleet(setting, screen, ship, aliens)
 		global bgloop
 		if stats.level % 5 == 1:
@@ -420,7 +420,7 @@ def updateScreen(setting, screen, stats, sb, ship, aliens, bullets, eBullets, pl
 	menuBtn.rect.y = 250
 	menuBtn.msgImageRect.y = 250
 	#screen.fill(setting.bgColor)
-	setting.bgimg(stats.level)
+
 	rel_x = x % setting.bg.get_rect().height
 	screen.blit(setting.bg, (0,rel_x - setting.bg.get_rect().height))
 	if rel_x < setting.screenHeight:

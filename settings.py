@@ -9,12 +9,12 @@ class Settings():
 		self.screenWidth = 550
 		self.screenHeight = 650
 		self.bgColor = (20, 20, 20)
-		self.image = pg.image.load("gfx/background.bmp")
+		self.image = pg.image.load("gfx/background2.png")
 		self.image = pg.transform.scale(self.image,(self.screenWidth,self.screenHeight))
 		self.bg = self.image
 		#Ultimate settings
 		self.ultimateGaugeIncrement = 3
-                		
+
 		#Ships speed
 		self.shipLimit = 5
 
@@ -43,6 +43,7 @@ class Settings():
 		number = number % 3
 		if number == 0:
 				self.image = pg.image.load("gfx/background2.png")
+				self.image = pg.transform.scale(self.image,(self.screenWidth,self.screenHeight))
 				self.bg = self.image
 		elif number == 1:
 				self.image = pg.image.load("gfx/background3.png")
@@ -52,11 +53,11 @@ class Settings():
 				self.image = pg.image.load("gfx/background4.png")
 				self.image = pg.transform.scale(self.image,(self.screenWidth,self.screenHeight))
 				self.bg = self.image
-        #        
+        #
 	def initDynamicSettings(self):
-		self.shipSpeed = 1.5
-		self.bulletSpeed = 4
-		self.alienSpeed = 1
+		self.shipSpeed = 4
+		self.bulletSpeed = 7
+		self.alienSpeed = 3
 		self.fleetDropSpeed = 5
 		self.fleetDir = 1
 		self.alienPoints = 10
@@ -73,7 +74,7 @@ class Settings():
 
 
 	def halfspeed(self):
-                if self.Limit >= -1 and self.shipSpeed>0 and self.bulletSpeed>0 and self.alienSpeed>0 and self.fleetDropSpeed>0: 
+                if self.Limit >= -1 and self.shipSpeed>0 and self.bulletSpeed>0 and self.alienSpeed>0 and self.fleetDropSpeed>0:
                         self.shipSpeed *= 0.5
                         self.bulletSpeed *= 0.5
                         self.alienSpeed *= 0.5
@@ -83,7 +84,7 @@ class Settings():
                         self.Limit -= 1
 
 	def doublespeed(self):
-                
+
                 self.shipSpeed *= 1.3
                 self.bulletSpeed *= 1.3
                 self.alienSpeed *= 1.3

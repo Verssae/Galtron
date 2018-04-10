@@ -149,12 +149,21 @@ def checkKeyupEvents(event, setting, screen, stats, ship, bullets, charged_bulle
         if not stats.paused:
             if (ship.chargeGauge == 100):
                 sounds.charge_shot.play()
+<<<<<<< HEAD
                 newBullet = Bullet(setting, screen, ship, ship.trajectory, 3, 5)
                 bullets.add(newBullet)
                 ship.chargeGauge = 0
             elif (50 <= ship.chargeGauge):
                 sounds.charge_shot.play()
                 newBullet = Bullet(setting, screen, ship, ship.trajectory, 2, 3)
+=======
+                newBullet = Bullet(setting, screen, ship, ship.trajectory, 3)
+                charged_bullets.add(newBullet)
+                ship.chargeGauge = 0
+            elif (50 <= ship.chargeGauge):
+                sounds.charge_shot.play()
+                newBullet = Bullet(setting, screen, ship, ship.trajectory, 2)
+>>>>>>> a0e8191dac20af6c86c7bdf4bf38b7af378b6c5a
                 charged_bullets.add(newBullet)
         ship.shoot = False
 
@@ -293,6 +302,10 @@ def changeFleetDir(setting, aliens):
 def shipHit(setting, stats, sb, screen, ship, aliens, bullets, eBullets):
     """Respond to ship being hit"""
     if stats.shipsLeft > 0:
+<<<<<<< HEAD
+=======
+
+>>>>>>> a0e8191dac20af6c86c7bdf4bf38b7af378b6c5a
         if pg.time.get_ticks() - setting.newStartTime > setting.invincibileTime:
             sounds.explosion_sound.play()
             stats.shipsLeft -= 1
@@ -301,6 +314,7 @@ def shipHit(setting, stats, sb, screen, ship, aliens, bullets, eBullets):
             ship.chargeGaugeStartTime = pg.time.get_ticks()
             # ship.centerShip()
             setting.newStartTime = pg.time.get_ticks()
+<<<<<<< HEAD
     elif stats.shipsLeft == 0:
         if pg.time.get_ticks() - setting.newStartTime > setting.invincibileTime:
             sounds.explosion_sound.play()
@@ -310,6 +324,8 @@ def shipHit(setting, stats, sb, screen, ship, aliens, bullets, eBullets):
             setting.newStartTime = pg.time.get_ticks()
             stats.gameActive = False
             checkHighScore(stats, sb)
+=======
+>>>>>>> a0e8191dac20af6c86c7bdf4bf38b7af378b6c5a
     else:
         stats.gameActive = False
         checkHighScore(stats, sb)
@@ -373,11 +389,16 @@ def updateItems(setting, screen, stats, sb, ship, aliens, bullets, eBullets, ite
             items.remove(item)
     for item in items.sprites():
         if item.rect.centerx -30 < ship.rect.x < item.rect.x +30 and item.rect.centery -20 < ship.rect.centery < item.rect.centery +20:
+<<<<<<< HEAD
             if item.type == 1:
                 if stats.shipsLeft < setting.shipLimit:
                     stats.shipsLeft += 1
                 else:
                     stats.score += setting.alienPoints * 3
+=======
+            if item.type == 1 and stats.shipsLeft < setting.shipLimit:
+                stats.shipsLeft += 1
+>>>>>>> a0e8191dac20af6c86c7bdf4bf38b7af378b6c5a
             items.remove(item)
 
 
@@ -554,7 +575,11 @@ def updateScreen(setting, screen, stats, sb, ship, aliens, bullets, eBullets, ch
     for i in items:
         i.update()
         i.drawitem()
+<<<<<<< HEAD
     #Shield if ship is invincibile
+=======
+    #Dodge if ship is invincibile
+>>>>>>> a0e8191dac20af6c86c7bdf4bf38b7af378b6c5a
     updateInvincibility(setting, screen, ship)
 
     # Update Ultimate Gauge

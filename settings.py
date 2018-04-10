@@ -45,19 +45,25 @@ class Settings():
         # New Level Starts at this time
         self.newStartTime = 0
 
+<<<<<<< HEAD
         # Game Level
         self.gameLevel = 'normal'
 
         # Alien shoot speed
         self.shootTimer = 50
 
+=======
+>>>>>>> a0e8191dac20af6c86c7bdf4bf38b7af378b6c5a
         #item probability %
         self.probabilityHeal = 10
 
         #invincibile time
         self.invincibileTime = 2000
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> a0e8191dac20af6c86c7bdf4bf38b7af378b6c5a
     def invertColor(self):
         self.bgColor = getInvertedRGB(self.bgColor)
         self.bulletColor = getInvertedRGB(self.bulletColor)

@@ -72,7 +72,7 @@ def runGame():
     speedButtons = ["fast","middle","slow"]
     settingsMenuButtons = ["menu", "invert","speed setting","quit"]
     speedButtons = ["fast","middle","slow","menu"]
-    
+
     bgManager = BackgroundManager(screen)
     bgManager.setFillColor((0, 0, 0))
     bgManager.addBackground("universe_1", "gfx/backgrounds/stars_back.png", 0, 1)
@@ -194,9 +194,8 @@ def runGame():
             spm.checkEvents(setting, screen, stats, sb, bMenu, ship, aliens, bullets, eBullets)
             spm.drawMenu(setting, screen, sb, bMenu)
 
-        while stats.mainGame:
-            if rungame == True:
-                print("test")
+        #hi
+
 
 
 # init bgm mixer

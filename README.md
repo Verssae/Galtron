@@ -1,8 +1,10 @@
 ﻿# Learning OSS development through GitHub
 
 
+
 | Participant   | Role       | ETC |
-|---------------|------------|-----|
+|===============|============|=====|
+| Jeongkyu Shin | Instructor |     |
 | Jeongkyu Shin | Instructor |     |
 | Lee jaehee    | student    |     |
 | Minseok  Kang | Student    |     |
@@ -11,10 +13,12 @@
 | Jaewoo Yang   | Student    |     |
 | Cho young il  | Student    |     |
 | Jinsung An    | Student    |     |
-| Minwoo Son	| Student    |     |
+| Minwoo Son	  | Student    |     |
 | Kim Dain      | Student    |     |
-| Jeongin Lee   | Student.   |     |
-| Minwoo Son.   | Student    |     |
+| Jeongin Lee   | Student    |     |
+| Minwoo Son	  | Student    |     |
+| Jeongin Lee   | Student.   |     |
+| Minwoo Son.   | Student    |     |
 | Kim Dain      | Student    |     |
 | Jeongin Lee   | Student    |     |
 | YK            | Student    |     |
@@ -33,7 +37,7 @@
 | Minseok  Kang | Student    |     |
 | Jaehun Kim.   | student.   |     |
 | Hansae Ju     | Student    |     |
-| Jaewoo Yang   | Student    |     |
+| ChaeHyun Baek | Student    |     |
 | Kim Tae Yoon           | Student    |     |
 | KeonWoong Noh | Student    |     |
 | Onyu Park     | Student    |     |

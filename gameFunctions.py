@@ -785,7 +785,7 @@ def updateScreen(setting, screen, stats, sb, ship, aliens, bullets, eBullets, ch
                 bMenu.setMenuButtons(exitButtons)
             else:
                 bMenu.setMenuButtons(pauseButtons)
-            bMenuself.setMenuButtons(pauseButtons)
+                bMenu.setMenuButtons(pauseButtons)
         bMenu.drawMenu()
     setting.explosions.draw(screen)
     # Make the most recently drawn screen visable.
